@@ -40,7 +40,7 @@ twig:
 # Doctrine Configuration
 doctrine:
     dbal:
-        driver:   pdo_mysql
+        driver:   pdo_pgsql
         host:     "%database_host%"
         port:     "%database_port%"
         dbname:   "%database_name%"
@@ -56,8 +56,20 @@ doctrine:
 
     orm:
         auto_generate_proxy_classes: "%kernel.debug%"
-        naming_strategy: doctrine.orm.naming_strategy.underscore
-        auto_mapping: true
+        #naming_strategy: doctrine.orm.naming_strategy.underscore
+        #auto_mapping: true
+        entity_managers:
+            # A collection of different named entity managers (e.g. some_em, another_em)
+            default:
+                mappings:
+                    # An array of mappings, which may be a bundle name or something else
+                    default:
+                        mapping:              true
+                        type:                 xml
+                        dir:                  app/Resources/config/doctrine
+                        alias:                ~
+                        prefix:               MightyMammoth\Entity
+                        is_bundle:            false
 
 # Swiftmailer Configuration
 swiftmailer:

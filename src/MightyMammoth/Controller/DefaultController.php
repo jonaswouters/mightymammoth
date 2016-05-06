@@ -1,4 +1,4 @@
-<?php declare(strict_types=1);
+<?php declare(strict_types = 1);
 
 namespace MightyMammoth\Controller;
 
@@ -14,7 +14,7 @@ class DefaultController
     /**
      * @return Response
      */
-    public function indexAction()
+    public function indexAction() : Response
     {
         return new Response('<html><body>Hello!</body></html>');
     }

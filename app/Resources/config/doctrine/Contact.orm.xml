@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+    <entity name="MightyMammoth\Entity\Contact" table="contacts">
+        <id name="id" type="bigint" column="id">
+            <generator strategy="IDENTITY"/>
+        </id>
+        <field name="displayName" type="string" column="display_name" length="255" nullable="false"/>
+        <field name="firstName" type="string" column="first_name" length="255" nullable="true"/>
+        <field name="lastName" type="string" column="last_name" length="255" nullable="true"/>
+        <field name="companyName" type="string" column="company_name" length="255" nullable="true"/>
+        <field name="email" type="string" column="email" length="255" nullable="true"/>
+        <field name="phoneNumber" type="string" column="phone_number" length="255" nullable="true"/>
+        <field name="vatNumber" type="string" column="vat_number" length="255" nullable="true"/>
+        <field name="createdAt" type="datetime" column="created_at" nullable="false"/>
+    </entity>
+</doctrine-mapping>
