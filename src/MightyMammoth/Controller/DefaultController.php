@@ -1,8 +1,7 @@
-<?php
+<?php declare(strict_types=1);
 
 namespace MightyMammoth\Controller;
 
-use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
 /**
@@ -13,11 +12,9 @@ use Symfony\Component\HttpFoundation\Response;
 class DefaultController
 {
     /**
-     * @param Request $request
-     *
      * @return Response
      */
-    public function indexAction(Request $request)
+    public function indexAction()
     {
         return new Response('<html><body>Hello!</body></html>');
     }
