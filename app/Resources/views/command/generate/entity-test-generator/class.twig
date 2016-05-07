@@ -23,7 +23,6 @@ class {{ entity_name }}Test extends \PHPUnit_Framework_TestCase
         $this->expectException('\TypeError');
         $entity->getId();
     }
-
     {% for property in properties if property != 'Id' %}
 
     {%- if property in ['CreatedAt', 'UpdatedAt', 'DueAt'] %}

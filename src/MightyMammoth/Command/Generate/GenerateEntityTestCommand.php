@@ -57,7 +57,9 @@ class GenerateEntityTestCommand extends Command
         $instance = new $entity;
 
         $reflect = new ReflectionClass($instance);
-        $reflectionProperties = $reflect->getProperties(ReflectionProperty::IS_PRIVATE | ReflectionProperty::IS_PROTECTED);
+        $reflectionProperties = $reflect->getProperties(
+            ReflectionProperty::IS_PRIVATE | ReflectionProperty::IS_PROTECTED
+        );
 
         $properties = [];
         foreach ($reflectionProperties as $property) {
