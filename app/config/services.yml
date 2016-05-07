@@ -6,3 +6,9 @@ parameters:
 services:
     controller_default:
         class: MightyMammoth\Controller\DefaultController
+    mightymammoth.command.generate.entity_test:
+        class: MightyMammoth\Command\Generate\GenerateEntityTestCommand
+        calls:
+            - [setTemplating, ['@templating']]
+        tags:
+            -  { name: console.command }

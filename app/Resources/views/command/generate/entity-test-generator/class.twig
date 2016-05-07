@@ -1,0 +1,35 @@
+<?php declare(strict_types = 1);
+
+namespace MightyMammoth\Entity{% if entity_dir %}\{{ entity_dir }}{% endif %};
+
+/**
+ * Class {{ entity_name }}Test
+ *
+ * @package MightyMammoth\Entity
+ */
+class {{ entity_name }}Test extends \PHPUnit_Framework_TestCase
+{
+    public function testCreation()
+    {
+        $entity = new {{ entity_name }}();
+
+        $this->assertInstanceOf({{ entity_name }}::class, $entity);
+    }
+
+    public function testId()
+    {
+        $entity = new {{ entity_name }}();
+
+        $this->expectException('\TypeError');
+        $entity->getId();
+    }
+
+    {% for property in properties if property != 'Id' %}
+
+    {%- if property in ['CreatedAt', 'UpdatedAt', 'DueAt'] %}
+        {% include 'command/generate/entity-test-generator/partial/datetime-property.twig' %}
+    {%- else -%}
+        {% include 'command/generate/entity-test-generator/partial/standard-property.twig' %}
+    {%- endif %}
+    {%- endfor -%}
+}

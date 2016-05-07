@@ -1,0 +1,10 @@
+
+    public function test{{ property }}()
+    {
+        $entity = new {{ entity_name }}();
+
+        $propertyValue = '{{ property }}';
+        $entity->set{{ property }}($propertyValue);
+        $this->assertInstanceOf({{ entity_name }}::class, $entity->set{{ property }}($propertyValue));
+        $this->assertEquals($propertyValue, $entity->get{{ property }}());
+    }
