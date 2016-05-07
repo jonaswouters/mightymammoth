@@ -64,6 +64,46 @@ class ContactTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals($propertyValue, $entity->getCompanyName());
     }
 
+    public function testAddress()
+    {
+        $entity = new Contact();
+
+        $propertyValue = 'Address';
+        $entity->setAddress($propertyValue);
+        $this->assertInstanceOf(Contact::class, $entity->setAddress($propertyValue));
+        $this->assertEquals($propertyValue, $entity->getAddress());
+    }
+
+    public function testPostalCode()
+    {
+        $entity = new Contact();
+
+        $propertyValue = 'PostalCode';
+        $entity->setPostalCode($propertyValue);
+        $this->assertInstanceOf(Contact::class, $entity->setPostalCode($propertyValue));
+        $this->assertEquals($propertyValue, $entity->getPostalCode());
+    }
+
+    public function testCity()
+    {
+        $entity = new Contact();
+
+        $propertyValue = 'City';
+        $entity->setCity($propertyValue);
+        $this->assertInstanceOf(Contact::class, $entity->setCity($propertyValue));
+        $this->assertEquals($propertyValue, $entity->getCity());
+    }
+
+    public function testCountry()
+    {
+        $entity = new Contact();
+
+        $propertyValue = 'Country';
+        $entity->setCountry($propertyValue);
+        $this->assertInstanceOf(Contact::class, $entity->setCountry($propertyValue));
+        $this->assertEquals($propertyValue, $entity->getCountry());
+    }
+
     public function testEmail()
     {
         $entity = new Contact();

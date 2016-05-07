@@ -35,6 +35,26 @@ class Contact
     /**
      * @var string
      */
+    private $address;
+
+    /**
+     * @var string
+     */
+    private $postalCode;
+
+    /**
+     * @var string
+     */
+    private $city;
+
+    /**
+     * @var string
+     */
+    private $country;
+
+    /**
+     * @var string
+     */
     private $email;
 
     /**
@@ -180,6 +200,102 @@ class Contact
     public function getCompanyName() : string
     {
         return $this->companyName;
+    }
+
+    /**
+     * Set address
+     *
+     * @param string $address
+     *
+     * @return Contact
+     */
+    public function setAddress(string $address) : Contact
+    {
+        $this->address = $address;
+
+        return $this;
+    }
+
+    /**
+     * Get address
+     *
+     * @return string
+     */
+    public function getAddress() : string
+    {
+        return $this->address;
+    }
+
+    /**
+     * Set postalCode
+     *
+     * @param string $postalCode
+     *
+     * @return Contact
+     */
+    public function setPostalCode(string $postalCode) : Contact
+    {
+        $this->postalCode = $postalCode;
+
+        return $this;
+    }
+
+    /**
+     * Get postalCode
+     *
+     * @return string
+     */
+    public function getPostalCode() : string
+    {
+        return $this->postalCode;
+    }
+
+    /**
+     * Set city
+     *
+     * @param string $city
+     *
+     * @return Contact
+     */
+    public function setCity(string $city) : Contact
+    {
+        $this->city = $city;
+
+        return $this;
+    }
+
+    /**
+     * Get city
+     *
+     * @return string
+     */
+    public function getCity() : string
+    {
+        return $this->city;
+    }
+
+    /**
+     * Set country
+     *
+     * @param string $country
+     *
+     * @return Contact
+     */
+    public function setCountry(string $country) : Contact
+    {
+        $this->country = $country;
+
+        return $this;
+    }
+
+    /**
+     * Get country
+     *
+     * @return string
+     */
+    public function getCountry() : string
+    {
+        return $this->country;
     }
 
     /**
