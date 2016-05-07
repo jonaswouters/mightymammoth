@@ -2,93 +2,105 @@
 
 namespace MightyMammoth\Entity;
 
+/**
+ * Class ContactTest
+ *
+ * @package MightyMammoth\Entity
+ */
 class ContactTest extends \PHPUnit_Framework_TestCase
 {
     public function testCreation()
     {
-        $contact = new Contact();
+        $entity = new Contact();
 
-        $this->assertInstanceOf(Contact::class, $contact);
+        $this->assertInstanceOf(Contact::class, $entity);
     }
 
     public function testId()
     {
-        $contact = new Contact();
+        $entity = new Contact();
 
         $this->expectException('\TypeError');
-        $contact->getId();
+        $entity->getId();
     }
-
+    
     public function testDisplayName()
     {
-        $contact = new Contact();
+        $entity = new Contact();
 
-        $displayName = 'DisplayName';
-        $contact->setDisplayName('DisplayName');
-        $this->assertInstanceOf(Contact::class, $contact->setDisplayName($displayName));
-        $this->assertEquals($displayName, $contact->getDisplayName());
-    }
-
-    public function testCompanyName()
-    {
-        $contact = new Contact();
-
-        $companyName = 'CompanyName';
-        $this->assertInstanceOf(Contact::class, $contact->setCompanyName($companyName));
-        $this->assertEquals($companyName, $contact->getCompanyName());
+        $propertyValue = 'DisplayName';
+        $entity->setDisplayName($propertyValue);
+        $this->assertInstanceOf(Contact::class, $entity->setDisplayName($propertyValue));
+        $this->assertEquals($propertyValue, $entity->getDisplayName());
     }
 
     public function testFirstName()
     {
-        $contact = new Contact();
+        $entity = new Contact();
 
-        $firstName = 'FirstName';
-        $this->assertInstanceOf(Contact::class, $contact->setFirstName($firstName));
-        $this->assertEquals($firstName, $contact->getFirstName());
+        $propertyValue = 'FirstName';
+        $entity->setFirstName($propertyValue);
+        $this->assertInstanceOf(Contact::class, $entity->setFirstName($propertyValue));
+        $this->assertEquals($propertyValue, $entity->getFirstName());
     }
 
     public function testLastName()
     {
-        $contact = new Contact();
+        $entity = new Contact();
 
-        $lastName = 'LastName';
-        $this->assertInstanceOf(Contact::class, $contact->setLastName($lastName));
-        $this->assertEquals($lastName, $contact->getLastName());
+        $propertyValue = 'LastName';
+        $entity->setLastName($propertyValue);
+        $this->assertInstanceOf(Contact::class, $entity->setLastName($propertyValue));
+        $this->assertEquals($propertyValue, $entity->getLastName());
+    }
+
+    public function testCompanyName()
+    {
+        $entity = new Contact();
+
+        $propertyValue = 'CompanyName';
+        $entity->setCompanyName($propertyValue);
+        $this->assertInstanceOf(Contact::class, $entity->setCompanyName($propertyValue));
+        $this->assertEquals($propertyValue, $entity->getCompanyName());
     }
 
     public function testEmail()
     {
-        $contact = new Contact();
+        $entity = new Contact();
 
-        $email = 'Email';
-        $this->assertInstanceOf(Contact::class, $contact->setEmail($email));
-        $this->assertEquals($email, $contact->getEmail());
+        $propertyValue = 'Email';
+        $entity->setEmail($propertyValue);
+        $this->assertInstanceOf(Contact::class, $entity->setEmail($propertyValue));
+        $this->assertEquals($propertyValue, $entity->getEmail());
     }
 
     public function testPhoneNumber()
     {
-        $contact = new Contact();
+        $entity = new Contact();
 
-        $phoneNumber = 'PhoneNumber';
-        $this->assertInstanceOf(Contact::class, $contact->setPhoneNumber($phoneNumber));
-        $this->assertEquals($phoneNumber, $contact->getPhoneNumber());
+        $propertyValue = 'PhoneNumber';
+        $entity->setPhoneNumber($propertyValue);
+        $this->assertInstanceOf(Contact::class, $entity->setPhoneNumber($propertyValue));
+        $this->assertEquals($propertyValue, $entity->getPhoneNumber());
     }
 
     public function testVatNumber()
     {
-        $contact = new Contact();
+        $entity = new Contact();
 
-        $vatNumber = 'VatNumber';
-        $this->assertInstanceOf(Contact::class, $contact->setVatNumber($vatNumber));
-        $this->assertEquals($vatNumber, $contact->getVatNumber());
+        $propertyValue = 'VatNumber';
+        $entity->setVatNumber($propertyValue);
+        $this->assertInstanceOf(Contact::class, $entity->setVatNumber($propertyValue));
+        $this->assertEquals($propertyValue, $entity->getVatNumber());
     }
-
+        
     public function testCreatedAt()
     {
-        $contact = new Contact();
+        $entity = new Contact();
 
-        $createdAt = new \DateTime();
-        $this->assertInstanceOf(Contact::class, $contact->setCreatedAt($createdAt));
-        $this->assertEquals($createdAt, $contact->getCreatedAt());
+        $propertyValue = new \DateTime();
+        $entity->setCreatedAt($propertyValue);
+        $this->assertInstanceOf(Contact::class, $entity->setCreatedAt($propertyValue));
+        $this->assertEquals($propertyValue, $entity->getCreatedAt());
     }
 }
