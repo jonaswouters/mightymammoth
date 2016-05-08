@@ -73,6 +73,11 @@ class Contact
     private $createdAt;
 
     /**
+     * @var \DateTimeInterface
+     */
+    private $updatedAt;
+
+    /**
      * Set displayName
      *
      * @param string $displayName
@@ -368,5 +373,29 @@ class Contact
     public function getVatNumber() : string
     {
         return $this->vatNumber;
+    }
+
+    /**
+     * Set updatedAt
+     *
+     * @param \DateTimeInterface $updatedAt
+     *
+     * @return Contact
+     */
+    public function setUpdatedAt(\DateTimeInterface $updatedAt) : Contact
+    {
+        $this->updatedAt = $updatedAt;
+
+        return $this;
+    }
+
+    /**
+     * Get updatedAt
+     *
+     * @return \DateTimeInterface|null
+     */
+    public function getUpdatedAt()
+    {
+        return $this->updatedAt;
     }
 }

@@ -143,4 +143,14 @@ class ContactTest extends \PHPUnit_Framework_TestCase
         $this->assertInstanceOf(Contact::class, $entity->setCreatedAt($propertyValue));
         $this->assertEquals($propertyValue, $entity->getCreatedAt());
     }
+        
+    public function testUpdatedAt()
+    {
+        $entity = new Contact();
+
+        $propertyValue = new \DateTime();
+        $entity->setUpdatedAt($propertyValue);
+        $this->assertInstanceOf(Contact::class, $entity->setUpdatedAt($propertyValue));
+        $this->assertEquals($propertyValue, $entity->getUpdatedAt());
+    }
 }
