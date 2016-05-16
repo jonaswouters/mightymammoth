@@ -4,10 +4,22 @@
         <id name="id" type="bigint" column="id">
             <generator strategy="IDENTITY"/>
         </id>
-        <one-to-one field="organization" target-entity="Organization">
+        <one-to-one field="organization" target-entity="MightyMammoth\Entity\Organization">
             <join-column name="organization_id" referenced-column-name="id" />
         </one-to-one>
-        <field name="number" type="string" column="number" length="255" nullable="false" unique="true"/>
+        <one-to-many
+                field="details"
+                target-entity="MightyMammoth\Entity\Invoice\Detail"
+                mapped-by="invoice" />
+        <field name="number" type="string" column="number" length="100" nullable="false" unique="true"/>
+        <field name="firstName" type="string" column="first_name" length="255" nullable="true"/>
+        <field name="lastName" type="string" column="last_name" length="255" nullable="true"/>
+        <field name="companyName" type="string" column="company_name" length="255" nullable="true"/>
+        <field name="vatNumber" type="string" column="vat_number" length="20" nullable="true"/>
+        <field name="address" type="string" column="address" length="255" nullable="true"/>
+        <field name="postalCode" type="string" column="postal_code" length="100" nullable="true"/>
+        <field name="city" type="string" column="city" length="85" nullable="true"/>
+        <field name="country" type="string" column="country" length="45" nullable="true"/>
         <field name="createdAt" type="datetime" column="created_at" nullable="false"/>
         <field name="updatedAt" type="datetime" column="updated_at" nullable="true"/>
         <field name="invoiceDate" type="datetime" column="invoice_date" nullable="false"/>

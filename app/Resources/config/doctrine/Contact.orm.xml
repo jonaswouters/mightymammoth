@@ -9,12 +9,12 @@
         <field name="lastName" type="string" column="last_name" length="255" nullable="true"/>
         <field name="companyName" type="string" column="company_name" length="255" nullable="true"/>
         <field name="address" type="string" column="address" length="255" nullable="true"/>
-        <field name="postalCode" type="string" column="postal_code" length="255" nullable="true"/>
-        <field name="city" type="string" column="city" length="255" nullable="true"/>
-        <field name="country" type="string" column="country" length="255" nullable="true"/>
+        <field name="postalCode" type="string" column="postal_code" length="100" nullable="true"/>
+        <field name="city" type="string" column="city" length="85" nullable="true"/>
+        <field name="country" type="string" column="country" length="45" nullable="true"/>
         <field name="email" type="string" column="email" length="255" nullable="true"/>
-        <field name="phoneNumber" type="string" column="phone_number" length="255" nullable="true"/>
-        <field name="vatNumber" type="string" column="vat_number" length="255" nullable="true"/>
+        <field name="phoneNumber" type="string" column="phone_number" length="100" nullable="true"/>
+        <field name="vatNumber" type="string" column="vat_number" length="20" nullable="true"/>
         <field name="createdAt" type="datetime" column="created_at" nullable="false"/>
         <field name="updatedAt" type="datetime" column="updated_at" nullable="true"/>
     </entity>

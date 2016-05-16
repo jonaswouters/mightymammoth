@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+    <entity name="MightyMammoth\Entity\Invoice\Detail" table="invoice_details">
+        <id name="id" type="bigint" column="id">
+            <generator strategy="IDENTITY"/>
+        </id>
+        <many-to-one field="invoice" target-entity="MightyMammoth\Entity\Invoice" inversed-by="details">
+            <join-column name="invoice_id" referenced-column-name="id" />
+        </many-to-one>
+        <field name="description" type="text" nullable="true" />
+        <field name="quantity" type="integer" nullable="true"/>
+        <field name="quantityType" type="string" nullable="true"/>
+        <field name="amount" type="integer" nullable="true"/>
+        <field name="vat" type="integer" nullable="true"/>
+    </entity>
+</doctrine-mapping>

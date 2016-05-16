@@ -224,5 +224,282 @@ class Invoice
     {
         return $this->organization;
     }
-}
+    /**
+     * @var string
+     */
+    private $firstName;
 
+    /**
+     * @var string
+     */
+    private $lastName;
+
+    /**
+     * @var string
+     */
+    private $companyName;
+
+    /**
+     * @var string
+     */
+    private $vatNumber;
+
+    /**
+     * @var string
+     */
+    private $address;
+
+    /**
+     * @var string
+     */
+    private $postalCode;
+
+    /**
+     * @var string
+     */
+    private $city;
+
+    /**
+     * @var string
+     */
+    private $country;
+
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     */
+    private $details;
+
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->details = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
+     * Set firstName
+     *
+     * @param string $firstName
+     *
+     * @return Invoice
+     */
+    public function setFirstName($firstName)
+    {
+        $this->firstName = $firstName;
+
+        return $this;
+    }
+
+    /**
+     * Get firstName
+     *
+     * @return string
+     */
+    public function getFirstName()
+    {
+        return $this->firstName;
+    }
+
+    /**
+     * Set lastName
+     *
+     * @param string $lastName
+     *
+     * @return Invoice
+     */
+    public function setLastName($lastName)
+    {
+        $this->lastName = $lastName;
+
+        return $this;
+    }
+
+    /**
+     * Get lastName
+     *
+     * @return string
+     */
+    public function getLastName()
+    {
+        return $this->lastName;
+    }
+
+    /**
+     * Set companyName
+     *
+     * @param string $companyName
+     *
+     * @return Invoice
+     */
+    public function setCompanyName($companyName)
+    {
+        $this->companyName = $companyName;
+
+        return $this;
+    }
+
+    /**
+     * Get companyName
+     *
+     * @return string
+     */
+    public function getCompanyName()
+    {
+        return $this->companyName;
+    }
+
+    /**
+     * Set vatNumber
+     *
+     * @param string $vatNumber
+     *
+     * @return Invoice
+     */
+    public function setVatNumber($vatNumber)
+    {
+        $this->vatNumber = $vatNumber;
+
+        return $this;
+    }
+
+    /**
+     * Get vatNumber
+     *
+     * @return string
+     */
+    public function getVatNumber()
+    {
+        return $this->vatNumber;
+    }
+
+    /**
+     * Set address
+     *
+     * @param string $address
+     *
+     * @return Invoice
+     */
+    public function setAddress($address)
+    {
+        $this->address = $address;
+
+        return $this;
+    }
+
+    /**
+     * Get address
+     *
+     * @return string
+     */
+    public function getAddress()
+    {
+        return $this->address;
+    }
+
+    /**
+     * Set postalCode
+     *
+     * @param string $postalCode
+     *
+     * @return Invoice
+     */
+    public function setPostalCode($postalCode)
+    {
+        $this->postalCode = $postalCode;
+
+        return $this;
+    }
+
+    /**
+     * Get postalCode
+     *
+     * @return string
+     */
+    public function getPostalCode()
+    {
+        return $this->postalCode;
+    }
+
+    /**
+     * Set city
+     *
+     * @param string $city
+     *
+     * @return Invoice
+     */
+    public function setCity($city)
+    {
+        $this->city = $city;
+
+        return $this;
+    }
+
+    /**
+     * Get city
+     *
+     * @return string
+     */
+    public function getCity()
+    {
+        return $this->city;
+    }
+
+    /**
+     * Set country
+     *
+     * @param string $country
+     *
+     * @return Invoice
+     */
+    public function setCountry($country)
+    {
+        $this->country = $country;
+
+        return $this;
+    }
+
+    /**
+     * Get country
+     *
+     * @return string
+     */
+    public function getCountry()
+    {
+        return $this->country;
+    }
+
+    /**
+     * Add detail
+     *
+     * @param \MightyMammoth\Entity\Invoice\Detail $detail
+     *
+     * @return Invoice
+     */
+    public function addDetail(\MightyMammoth\Entity\Invoice\Detail $detail)
+    {
+        $this->details[] = $detail;
+
+        return $this;
+    }
+
+    /**
+     * Remove detail
+     *
+     * @param \MightyMammoth\Entity\Invoice\Detail $detail
+     */
+    public function removeDetail(\MightyMammoth\Entity\Invoice\Detail $detail)
+    {
+        $this->details->removeElement($detail);
+    }
+
+    /**
+     * Get details
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getDetails()
+    {
+        return $this->details;
+    }
+}
