@@ -3,6 +3,7 @@
 namespace MightyMammoth\Controller;
 
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\Templating\EngineInterface;
 
 /**
  * Class DefaultController
@@ -12,10 +13,25 @@ use Symfony\Component\HttpFoundation\Response;
 class DefaultController
 {
     /**
+     * @var EngineInterface
+     */
+    private $templating;
+
+    /**
+     * DefaultController constructor.
+     *
+     * @param EngineInterface $templating
+     */
+    public function __construct(EngineInterface $templating)
+    {
+        $this->templating = $templating;
+    }
+
+    /**
      * @return Response
      */
     public function indexAction() : Response
     {
-        return new Response('<html><body>Hello!</body></html>');
+        return new Response($this->templating->render('default/index.html.twig'));
     }
 }

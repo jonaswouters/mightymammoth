@@ -56,17 +56,17 @@ doctrine:
 
     orm:
         auto_generate_proxy_classes: "%kernel.debug%"
-        #naming_strategy: doctrine.orm.naming_strategy.underscore
         #auto_mapping: true
         entity_managers:
             # A collection of different named entity managers (e.g. some_em, another_em)
             default:
+                naming_strategy: doctrine.orm.naming_strategy.underscore
                 mappings:
                     # An array of mappings, which may be a bundle name or something else
                     default:
                         mapping:              true
                         type:                 xml
-                        dir:                  app/Resources/config/doctrine
+                        dir:                  app/Resources/config/doctrine/
                         alias:                ~
                         prefix:               MightyMammoth\Entity
                         is_bundle:            false
