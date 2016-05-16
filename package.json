@@ -1,0 +1,26 @@
+{
+  "name": "mightymammoth",
+  "version": "1.0.0",
+  "description": "A simple web app / api for small businesses and freelancers to help with all the grunt work like document management, payment followup, time tracking, invoicing and more.",
+  "main": "index.php",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jonaswouters/mightymammoth.git"
+  },
+  "author": "Jonas Wouters",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jonaswouters/mightymammoth/issues"
+  },
+  "homepage": "https://github.com/jonaswouters/mightymammoth#readme",
+  "devDependencies": {
+    "bootstrap": "^4.0.0-alpha.2",
+    "gulp": "^3.9.1"
+  }
+}
