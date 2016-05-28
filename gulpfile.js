@@ -12,7 +12,7 @@ var gulp = require('gulp'),
     del = require('del');
 
 gulp.task('styles', function() {
-    gulp.src(['node_modules/bootstrap/scss/bootstrap.scss', 'app/Resources/public/scss/*.scss'])
+    gulp.src(['app/Resources/public/scss/*.scss'])
         .pipe(sass().on('error', sass.logError))
         .pipe(autoprefixer('last 2 version'))
         .pipe(gulp.dest('web/css'))
