@@ -197,4 +197,3 @@ class Detail
         return $this->invoice;
     }
 }
-

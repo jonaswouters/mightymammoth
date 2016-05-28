@@ -93,4 +93,84 @@ class InvoiceTest extends \PHPUnit_Framework_TestCase
         $this->assertInstanceOf(Invoice::class, $entity->setOrganization($propertyValue));
         $this->assertEquals($propertyValue, $entity->getOrganization());
     }
+
+    public function testFirstName()
+    {
+        $entity = new Invoice();
+
+        $propertyValue = 'FirstName';
+        $entity->setFirstName($propertyValue);
+        $this->assertInstanceOf(Invoice::class, $entity->setFirstName($propertyValue));
+        $this->assertEquals($propertyValue, $entity->getFirstName());
+    }
+
+    public function testLastName()
+    {
+        $entity = new Invoice();
+
+        $propertyValue = 'LastName';
+        $entity->setLastName($propertyValue);
+        $this->assertInstanceOf(Invoice::class, $entity->setLastName($propertyValue));
+        $this->assertEquals($propertyValue, $entity->getLastName());
+    }
+
+    public function testCompanyName()
+    {
+        $entity = new Invoice();
+
+        $propertyValue = 'CompanyName';
+        $entity->setCompanyName($propertyValue);
+        $this->assertInstanceOf(Invoice::class, $entity->setCompanyName($propertyValue));
+        $this->assertEquals($propertyValue, $entity->getCompanyName());
+    }
+
+    public function testVatNumber()
+    {
+        $entity = new Invoice();
+
+        $propertyValue = 'VatNumber';
+        $entity->setVatNumber($propertyValue);
+        $this->assertInstanceOf(Invoice::class, $entity->setVatNumber($propertyValue));
+        $this->assertEquals($propertyValue, $entity->getVatNumber());
+    }
+
+    public function testAddress()
+    {
+        $entity = new Invoice();
+
+        $propertyValue = 'Address';
+        $entity->setAddress($propertyValue);
+        $this->assertInstanceOf(Invoice::class, $entity->setAddress($propertyValue));
+        $this->assertEquals($propertyValue, $entity->getAddress());
+    }
+
+    public function testPostalCode()
+    {
+        $entity = new Invoice();
+
+        $propertyValue = 'PostalCode';
+        $entity->setPostalCode($propertyValue);
+        $this->assertInstanceOf(Invoice::class, $entity->setPostalCode($propertyValue));
+        $this->assertEquals($propertyValue, $entity->getPostalCode());
+    }
+
+    public function testCity()
+    {
+        $entity = new Invoice();
+
+        $propertyValue = 'City';
+        $entity->setCity($propertyValue);
+        $this->assertInstanceOf(Invoice::class, $entity->setCity($propertyValue));
+        $this->assertEquals($propertyValue, $entity->getCity());
+    }
+
+    public function testCountry()
+    {
+        $entity = new Invoice();
+
+        $propertyValue = 'Country';
+        $entity->setCountry($propertyValue);
+        $this->assertInstanceOf(Invoice::class, $entity->setCountry($propertyValue));
+        $this->assertEquals($propertyValue, $entity->getCountry());
+    }
 }
