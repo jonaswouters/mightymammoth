@@ -13,7 +13,7 @@ class Detail
     private $description;
 
     /**
-     * @var integer
+     * @var float
      */
     private $quantity;
 
@@ -70,7 +70,7 @@ class Detail
     /**
      * Set quantity
      *
-     * @param integer $quantity
+     * @param float $quantity
      *
      * @return Detail
      */
@@ -84,7 +84,7 @@ class Detail
     /**
      * Get quantity
      *
-     * @return integer
+     * @return float
      */
     public function getQuantity()
     {

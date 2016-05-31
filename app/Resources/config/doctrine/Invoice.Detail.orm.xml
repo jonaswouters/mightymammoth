@@ -8,7 +8,7 @@
             <join-column name="invoice_id" referenced-column-name="id" />
         </many-to-one>
         <field name="description" type="text" nullable="true" />
-        <field name="quantity" type="integer" nullable="true"/>
+        <field name="quantity" type="float" nullable="true"/>
         <field name="quantityType" type="string" nullable="true"/>
         <field name="amount" type="integer" nullable="true"/>
         <field name="vat" type="integer" nullable="true"/>
